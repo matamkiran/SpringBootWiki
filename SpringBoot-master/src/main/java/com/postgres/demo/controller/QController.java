@@ -29,7 +29,7 @@ public class QController {
     }
 	
 	@PostMapping("/my/question/save")
-    public Question createQuestion(@RequestHeader(name = "X-Trace-Id") String transid ,@RequestBody Question question) {
+    public Question createQuestion(@RequestBody Question question) {
 		return iQuestionService.saveQuestion(question);
     }
 
